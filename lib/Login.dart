@@ -1,4 +1,5 @@
 
+import 'package:dwelling_app/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'modal/button.dart';
 
@@ -123,6 +124,7 @@ class _LoginState extends State<Login> {
                 child: ElevatedButton(
                   style: buttonPrimary,
                   onPressed: () {
+                    Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) => HomeScreen(),), (route) => false);
 
                   },
                   child: const Text(
