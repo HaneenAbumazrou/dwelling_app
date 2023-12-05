@@ -1,3 +1,4 @@
+import 'package:dwelling_app/MyProfile.dart';
 import 'package:dwelling_app/faevrets_screec.dart';
 import 'package:dwelling_app/reactions_screen.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
    const Home(),
     const ReactionsScreen(),
     const FavoriteScreen(),
-    const Text('data'),
+    ProfilePage(),
   ];
   int selectedIndex = 0;
 
@@ -40,28 +41,28 @@ class _HomeScreenState extends State<HomeScreen> {
                 icon: SvgPicture.asset(
                   'assets/icons/home-2-svgrepo-com.svg',
                   width: 25,
-                  color: (selectedIndex == 0) ? Colors.purple : Colors.black,
+                  color: (selectedIndex == 0) ? Color(0xffBD5484): Colors.black,
                 ),
                 label: ''),
             BottomNavigationBarItem(
                 icon: SvgPicture.asset(
                   'assets/icons/hotel-1-svgrepo-com.svg',
                   width: 25,
-                  color: (selectedIndex == 1) ? Colors.purple : Colors.black,
+                  color: (selectedIndex == 1) ? Color(0xffBD5484): Colors.black,
                 ),
                 label: ''),
             BottomNavigationBarItem(
                 icon: SvgPicture.asset(
                   'assets/icons/list-heart-svgrepo-com.svg',
                   width: 25,
-                  color: (selectedIndex == 2) ? Colors.purple : Colors.black,
+                  color: (selectedIndex == 2) ? Color(0xffBD5484) : Colors.black,
                 ),
                 label: ''),
             BottomNavigationBarItem(
                 icon: SvgPicture.asset(
                   'assets/icons/profile-circle-svgrepo-com.svg',
                   width: 25,
-                  color: (selectedIndex == 3) ? Colors.purple : Colors.black,
+                  color: (selectedIndex == 3) ? Color(0xffBD5484): Colors.black,
                 ),
                 label: ''),
           ],
