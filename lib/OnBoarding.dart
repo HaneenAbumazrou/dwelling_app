@@ -1,5 +1,6 @@
 import 'Login.dart';
 import 'package:flutter/material.dart';
+import 'Malak/Create.dart';
 import 'Modal/Onboard.dart';
 import 'Modal/button.dart';
 
@@ -71,7 +72,9 @@ class OnBoarding extends StatelessWidget {
                         const SizedBox(height: 16),
                         TextButton(
                           onPressed: () {
-                            // Implement logic for Create an Account button
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) =>  Create()));
                           },
                           style: TextButton.styleFrom(
                             primary: Colors.white,
