@@ -54,7 +54,7 @@ class _CartState extends State<Cart> {
                 Text(
                   widget.street,
                   textAlign: TextAlign.start,
-                  style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold,color: Colors.black),
                 ),
                 IconButton(
                   onPressed: () {
@@ -67,7 +67,7 @@ class _CartState extends State<Cart> {
                     (selected)
                         ? Icons.favorite_rounded
                         : Icons.favorite_border_outlined,
-                    color: Colors.amber,
+                    color: Colors.red,
                     size: 30,
                   ),
                 ),
@@ -82,7 +82,7 @@ class _CartState extends State<Cart> {
                   children: [
                     const Icon(
                       Icons.drive_file_move_outline,
-                      color: Colors.purpleAccent,
+                      color: Color(0xffBD5484),
                     ),
                     Text(
                       '${widget.space}',
@@ -95,7 +95,7 @@ class _CartState extends State<Cart> {
                   children: [
                     const Icon(
                       Icons.shower_outlined,
-                      color: Colors.purpleAccent,
+                      color: Color(0xffBD5484),
                     ),
                     Text(
                       '${widget.bathroom}',
@@ -106,7 +106,7 @@ class _CartState extends State<Cart> {
                 ),
                 Row(
                   children: [
-                    const Icon(Icons.bed_sharp, color: Colors.purpleAccent),
+                    const Icon(Icons.bed_sharp, color: Color(0xffBD5484)),
                     Text(
                       '${widget.beds} beds in',
                       style: const TextStyle(
@@ -133,12 +133,12 @@ class _CartState extends State<Cart> {
                       backgroundImage: AssetImage(widget.imageUser),
                     ),
                     const SizedBox(width: 10),
-                    Text(widget.nameUser),
+                    Text(widget.nameUser,style: TextStyle(color: Colors.black),),
                   ],
                 ),
                 IconButton(
                   onPressed: () {},
-                  icon: const Icon(Icons.arrow_forward),
+                  icon: const Icon(Icons.arrow_forward,color: Colors.black,),
                 ),
               ],
             ),

@@ -42,14 +42,6 @@ class ProfilePage extends StatelessWidget {
                         fit: BoxFit.cover,
                       ),
                     ),
-                    child: Align(
-                      alignment: Alignment.bottomRight,
-                      child: IconButton(
-                        onPressed: () {},
-                        icon: Icon(Icons.edit),
-                        color: Color(0xffBD5484),
-                      ),
-                    ),
                   ),
                 ),
               ),
@@ -67,14 +59,7 @@ class ProfilePage extends StatelessWidget {
                     SizedBox(height: 5),
                     IconButton(
                       onPressed: () {},
-                      icon: Icon(Icons.favorite),
-                      color: Color(0xffBD5484),
-                      iconSize: 30,
-                    ),
-                    SizedBox(height: 5),
-                    IconButton(
-                      onPressed: () {},
-                      icon: Icon(Icons.settings),
+                      icon: Icon(Icons.add),
                       color: Color(0xffBD5484),
                       iconSize: 30,
                     ),

@@ -1,5 +1,5 @@
 import 'package:dwelling_app/MyProfile.dart';
-import 'package:dwelling_app/faevrets_screec.dart';
+import 'package:dwelling_app/favorite_screen.dart';
 import 'package:dwelling_app/reactions_screen.dart';
 import 'package:flutter/material.dart';
 
