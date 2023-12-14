@@ -1,5 +1,6 @@
 import 'package:dwelling_app/MyProfile.dart';
 import 'package:dwelling_app/favorite_screen.dart';
+import 'package:dwelling_app/profile.dart';
 import 'package:dwelling_app/reactions_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
    const Home(),
     const ReactionsScreen(),
     const FavoriteScreen(),
-    ProfilePage(),
+    Profile(),
   ];
   int selectedIndex = 0;
 
