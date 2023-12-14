@@ -165,11 +165,25 @@ class EditProfilePage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 16.0),
-                const CircleAvatar(
-                  radius: 50.0,
-                  backgroundImage: AssetImage('assets/images/06361988-ab1d-48cb-bdc0-8fb7b6b25a04.jpg'),
+                InkWell(
+                  onTap: () {
+                    // Add functionality for editing the profile picture here
+                  },
+                  child: Stack(
+                    alignment: Alignment.bottomRight,
+                    children: [
+                      CircleAvatar(
+                        radius: 50.0,
+                        backgroundImage: AssetImage('assets/images/06361988-ab1d-48cb-bdc0-8fb7b6b25a04.jpg'),
+                      ),
+                      Icon(
+                        Icons.edit,
+                        color: Color(0xffBD5484),
+                        size: 20.0,
+                      ),
+                    ],
+                  ),
                 ),
-
                 const SizedBox(height: 16.0),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -209,7 +223,6 @@ class EditProfilePage extends StatelessWidget {
                 ElevatedButton(
                   style: buttonPrimary,
                   onPressed: () {
-
                     Navigator.pop(context);
                   },
                   child: const Text('Save Changes', style: TextStyle(color: Colors.white, fontSize: 20)),

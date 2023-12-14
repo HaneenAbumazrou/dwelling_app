@@ -2,7 +2,6 @@ import 'Login.dart';
 import 'package:flutter/material.dart';
 import 'Malak/Create.dart';
 import 'Modal/Onboard.dart';
-import 'Modal/button.dart';
 
 class OnBoarding extends StatelessWidget {
   List<AssetImage> images = [
