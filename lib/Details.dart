@@ -154,7 +154,7 @@ class Details extends StatelessWidget {
                 SizedBox(height: 20),
                 Container(
                   child: Image(image: AssetImage('map.png'),
-                  ),
+                  fit: BoxFit.cover),
                 )
               ],
             ),
