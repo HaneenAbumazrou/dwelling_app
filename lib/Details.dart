@@ -1,4 +1,7 @@
+import 'package:dwelling_app/Modal/button.dart';
 import 'package:flutter/material.dart';
+
+import 'MyProfile.dart';
 
 class Details extends StatelessWidget {
   @override
@@ -26,24 +29,44 @@ class Details extends StatelessWidget {
                       top: 20,
                       child: GestureDetector(
                         onTap: () {},
-                        child: Container(
+                        child: SizedBox(
                           width: 390,
                           height: 220,
-                          decoration: BoxDecoration(
-                            shape: BoxShape.rectangle,
-                            borderRadius: BorderRadius.circular(10.0),
-                            border: Border.all(
-                              color: Color(0xffBD5484),
-                              width: 3,
-                            ),
-                            image: DecorationImage(
-                              image: AssetImage('assets/images/Screenshot 2023-11-30 105004.png'),
-                              fit: BoxFit.cover,
-                            ),
+                          child: PageView(
+                            children: [
+                              Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20.0),
+                                  image: DecorationImage(
+                                    image: AssetImage('assets/images/لقطة شاشة 2023-12-14 152820.png'),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20.0),
+                                  image: DecorationImage(
+                                    image: AssetImage('assets/images/لقطة شاشة 2023-12-14 152846.png'),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20.0),
+                                  image: DecorationImage(
+                                    image: AssetImage('assets/images/لقطة شاشة 2023-12-14 152918.png'),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
                     ),
+
                     Positioned(
                       left: 20,
                       top: 200,
@@ -80,7 +103,7 @@ class Details extends StatelessWidget {
                                       fontWeight: FontWeight.bold,
                                       color: Colors.white,
                                     ),
-                                  )
+                                  ),
                                 ],
                               ),
                               const SizedBox(height: 8), // Add this SizedBox for spacing
@@ -96,7 +119,7 @@ class Details extends StatelessWidget {
                                       fontWeight: FontWeight.bold,
                                       color: Colors.white,
                                     ),
-                                  )
+                                  ),
                                 ],
                               ),
                               const SizedBox(height: 8), // Add this SizedBox for spacing
@@ -109,12 +132,11 @@ class Details extends StatelessWidget {
                                       fontWeight: FontWeight.bold,
                                       color: Colors.white,
                                     ),
-                                  )
+                                  ),
                                 ],
                               ),
                             ],
                           ),
-
                           SizedBox(height: 8),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -131,31 +153,42 @@ class Details extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 20), // Adjust spacing as needed
-                Container(
-                  height:300, // Adjust the height of the scrollable photos container
-                  child: PageView(
-                    children: [
-                      Image(
-                        image: AssetImage('assets/images/لقطة شاشة 2023-12-14 152820.png'),
-                        fit: BoxFit.cover,
-                      ),
-                      Image(
-                        image: AssetImage('assets/images/لقطة شاشة 2023-12-14 152846.png'),
-                        fit: BoxFit.cover,
-                      ),
-                      Image(
-                        image: AssetImage('assets/images/لقطة شاشة 2023-12-14 152918.png'),
-                        fit: BoxFit.cover,
-                      ),
-                    ],
-                  ),
-                ),
                 SizedBox(height: 20),
                 Container(
-                  child: Image(image: AssetImage('map.png'),
-                  fit: BoxFit.cover),
-                )
+                  width: 350,
+                  child: Image(image: AssetImage('assets/images/map.png'),
+                      fit: BoxFit.fitWidth),
+                ),
+                SizedBox(height: 16),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    const CircleAvatar(
+                      radius: 30.0,
+                      backgroundImage: AssetImage('assets/images/Screenshot 2023-11-30 155041.png'),
+                    ),
+                    const SizedBox(width: 16.0),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text(
+                          'Mohammad Ahmad',
+                          style: TextStyle(
+                            fontSize: 16.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) => ProfilePage(),), (route) => false);
+                  },
+                  style: buttonPrimary,
+                  child: const Text('Show profile', style: TextStyle(color: Colors.white, fontSize: 20)),
+                ),
               ],
             ),
           ),
@@ -164,5 +197,3 @@ class Details extends StatelessWidget {
     );
   }
 }
-
-

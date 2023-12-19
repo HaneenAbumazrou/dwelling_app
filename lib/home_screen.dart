@@ -1,4 +1,4 @@
-import 'package:dwelling_app/MyProfile.dart';
+import 'package:dwelling_app/Details.dart';
 import 'package:dwelling_app/favorite_screen.dart';
 import 'package:dwelling_app/profile.dart';
 import 'package:dwelling_app/reactions_screen.dart';
@@ -102,7 +102,9 @@ class _HomeState extends State<Home> {
                 scrollDirection: Axis.horizontal,
                 children: [
                   Cart(
-                    onTab: (){},
+                    onTab: (){
+                      Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) => Details(),), (route) => false);
+                    },
                     space: 12.0,
                     beds: 2,
                     nameUser: 'Mohammad Ahmad',
@@ -144,7 +146,7 @@ class _HomeState extends State<Home> {
         ),
         const Image(
           image: AssetImage('assets/images/map.png'),
-          width: 360,
+          width: 500,
           fit: BoxFit.fitWidth,
         )
       ],
