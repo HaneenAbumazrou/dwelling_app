@@ -1,6 +1,7 @@
 
 import 'package:dwelling_app/home_screen.dart';
 import 'package:flutter/material.dart';
+import 'Malak/Create.dart';
 import 'modal/button.dart';
 
 
@@ -137,14 +138,20 @@ class _LoginState extends State<Login> {
 
               //comment
               const SizedBox(height: 70.0),
-              const Row( mainAxisAlignment: MainAxisAlignment.center,
+               Row( mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     'Not Registered yet?', style: TextStyle(
                       color: Colors.grey, fontSize: 14.0),
                   ),
-                  Text(' Create an Account', style: TextStyle(
+                  TextButton(
+                    onPressed: () {
+                      Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) => Create(),), (route) => false);
+
+                    },
+                    child: Text(' Create an Account', style: TextStyle(
                       color: Color(0xffBD5484), fontSize: 14.0)
+                  ),
                   ),
                 ],
 
