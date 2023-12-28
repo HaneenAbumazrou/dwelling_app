@@ -9,6 +9,15 @@ class Create extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(elevation: 0,
+        backgroundColor: const Color(0xffFFFBFE), leading: IconButton(
+          iconSize: 30,
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+      ),
       body:
         SafeArea(
           child: Padding(
