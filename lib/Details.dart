@@ -154,15 +154,9 @@ class Details extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 20),
-                Container(
-                  width: 350,
-                  child: Image(image: AssetImage('assets/images/map.png'),
-                      fit: BoxFit.fitWidth),
-                ),
-                SizedBox(height: 16),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
+                    SizedBox(width: 15),
                     const CircleAvatar(
                       radius: 30.0,
                       backgroundImage: AssetImage('assets/images/Screenshot 2023-11-30 155041.png'),
@@ -180,14 +174,22 @@ class Details extends StatelessWidget {
                         ),
                       ],
                     ),
+                    Spacer(),
+                    IconButton(onPressed:(){} , icon: Icon(Icons.location_on_outlined,size:50 ,color: Color(0xffBD5484),))
                   ],
                 ),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) => ProfilePage(),), (route) => false);
-                  },
-                  style: buttonPrimary,
-                  child: const Text('Show profile', style: TextStyle(color: Colors.white, fontSize: 20)),
+                const SizedBox(height: 20.0),
+                Center(
+                  child: ElevatedButton(
+                    style: buttonPrimary,
+                    onPressed: () {
+                      Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) => ProfilePage(),), (route) => false);
+
+                    },
+                    child: const Text(
+                      'Show Profile', style: TextStyle(color: Colors.white,fontSize: 18),
+                    ),
+                  ),
                 ),
               ],
             ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'Modal/button.dart';
+
 class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -92,7 +94,19 @@ class ProfilePage extends StatelessWidget {
                         ),
                       ],
                     ),
-                  ],
+                    SizedBox(height:150),
+                    Padding(
+                      padding: const EdgeInsets.all(22),
+                      child: ElevatedButton(
+                        style: buttonPrimary,
+                        onPressed: () {
+                        },
+                        child: const Text(
+                          'Contact Me', style: TextStyle(color: Colors.white,fontSize: 18),
+                        ),
+                      ),
+                    ),
+                ],
                 ),
               ),
             ],
