@@ -1,5 +1,8 @@
+
 import 'package:flutter/material.dart';
 import 'Modal/button.dart';
+import 'dart:io';
+import 'package:image_picker/image_picker.dart';
 
 
 class Profile extends StatelessWidget {
@@ -63,7 +66,7 @@ class Profile extends StatelessWidget {
                 ),
                 const SizedBox(height: 100),
                 buildContainerWithItems([
-                  {'title': 'Language', 'icon': Icons.credit_card, 'color': Colors.black},
+                  {'title': 'Language', 'icon': Icons.language, 'color': Colors.black},
                   {'title': 'Rate This App', 'icon': Icons.star, 'color': Colors.black},
                   {'title': 'Log Out', 'icon': Icons.exit_to_app, 'color': Colors.black},
                 ]),
@@ -130,9 +133,57 @@ class Profile extends StatelessWidget {
     );
   }
 }
+class EditProfilePage extends StatefulWidget {
+  const EditProfilePage({Key? key}) : super(key: key);
 
-class EditProfilePage extends StatelessWidget {
-  const EditProfilePage({super.key});
+  @override
+  _EditProfilePageState createState() => _EditProfilePageState();
+}
+
+class _EditProfilePageState extends State<EditProfilePage> {
+  File? _image;
+
+  Future<void> _pickImage(ImageSource source) async {
+    try {
+      final pickedImage = await ImagePicker().pickImage(source: source);
+      if (pickedImage != null) {
+        setState(() {
+          _image = File(pickedImage.path);
+        });
+      }
+    } catch (e) {
+      print('Error picking image: $e');
+    }
+  }
+
+  void _showOptions(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            ListTile(
+              leading: Icon(Icons.photo_library,size: 30,color:Color(0xffBD5484) ,),
+              title: Text('Pick Image from Gallery'),
+              onTap: () {
+                Navigator.pop(context);
+                _pickImage(ImageSource.gallery);
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.camera_alt,size: 30,color:Color(0xffBD5484) ,),
+              title: Text('Take Photo'),
+              onTap: () {
+                Navigator.pop(context);
+                _pickImage(ImageSource.camera);
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -166,20 +217,22 @@ class EditProfilePage extends StatelessWidget {
                 ),
                 const SizedBox(height: 16.0),
                 InkWell(
-                  onTap: () {
-                    // Add functionality for editing the profile picture here
-                  },
+                  onTap:() {_showOptions(context);},
                   child: Stack(
                     alignment: Alignment.bottomRight,
                     children: [
                       CircleAvatar(
                         radius: 50.0,
-                        backgroundImage: AssetImage('assets/images/06361988-ab1d-48cb-bdc0-8fb7b6b25a04.jpg'),
+                        backgroundImage:  AssetImage('assets/images/06361988-ab1d-48cb-bdc0-8fb7b6b25a04.jpg'),
                       ),
-                      Icon(
-                        Icons.edit,
-                        color: Color(0xffBD5484),
-                        size: 20.0,
+                      IconButton(
+                        icon: Icon(
+                          Icons.camera_alt,
+                          color: Color(0xffBD5484),
+                          size: 30,
+                        ),
+                        onPressed: () {_showOptions(context);
+                          },
                       ),
                     ],
                   ),
