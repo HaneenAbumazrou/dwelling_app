@@ -1,5 +1,6 @@
 import 'package:dwelling_app/Details.dart';
 import 'package:dwelling_app/favorite_screen.dart';
+import 'package:dwelling_app/map_page.dart';
 import 'package:dwelling_app/profile.dart';
 import 'package:dwelling_app/reactions_screen.dart';
 import 'package:flutter/material.dart';
@@ -144,11 +145,11 @@ class _HomeState extends State<Home> {
             ),
           ],
         ),
-        const Image(
-          image: AssetImage('assets/images/map.png'),
-          width: 500,
-          fit: BoxFit.fitWidth,
-        )
+        SizedBox(height:90 ),
+        IconButton(onPressed:(){
+          Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) => MapPage(),), (route) => false);
+         } ,
+            icon: Icon(Icons.location_on,size:100 ,color: Color(0xffBD5484),))
       ],
     );
   }

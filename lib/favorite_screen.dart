@@ -14,76 +14,51 @@ class FavoriteScreen extends StatefulWidget {
 class _FavoriteScreenState extends State<FavoriteScreen> {
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Scaffold(
+      backgroundColor: Color(0xffBD5484),
+     body:SafeArea(
+        child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 23),
+          child: Column(
       children: [
-        Stack(
-          children: [
-            Image.asset(
-              'assets/images/Screenshot 2023-11-30 102342.png',
-              width: double.infinity,
-              fit: BoxFit.fitWidth,
-            ),
-            SizedBox(
-              width: double.infinity,
-              height: 730,
-              child: ListView(
-                scrollDirection: Axis.vertical,
-                children: [
-                  Cart(
-                    onTab: (){},
-                    space: 12.0,
-                    beds: 2,
-                    nameUser: 'Mohammad Ahmad',
-                    isFavorite: true,
-                    bathroom: 2,
-                    onTabUserProfile: () {},
-                    imageUser: 'assets/images/Screenshot 2023-11-30 155041.png',
-                    imageUrl: 'assets/images/Screenshot 2023-11-30 105004.png',
-                    street: '70 West 37th Street #709',
-                  ),
-                  Cart(
-                    onTab: (){},
-                    space: 12.0,
-                    beds: 2,
-                    nameUser: 'Mohammad Ahmad',
-                    isFavorite: true,
-                    bathroom: 2,
-                    onTabUserProfile: () {},
-                    imageUser: 'assets/images/Screenshot 2023-11-30 155041.png',
-                    imageUrl: 'assets/images/Screenshot 2023-11-30 105004.png',
-                    street: '70 West 37th Street #709',
-                  ),
-                  Cart(
-                    onTab: (){},
-                    space: 12.0,
-                    beds: 2,
-                    nameUser: 'Mohammad Ahmad',
-                    isFavorite: true,
-                    bathroom: 2,
-                    onTabUserProfile: () {},
-                    imageUser: 'assets/images/Screenshot 2023-11-30 155041.png',
-                    imageUrl: 'assets/images/Screenshot 2023-11-30 105004.png',
-                    street: '70 West 37th Street #709',
-                  ),
-                  Cart(
-                    onTab: (){},
-                    space: 12.0,
-                    beds: 2,
-                    nameUser: 'Mohammad Ahmad',
-                    isFavorite: true,
-                    bathroom: 2,
-                    onTabUserProfile: () {},
-                    imageUser: 'assets/images/Screenshot 2023-11-30 155041.png',
-                    imageUrl: 'assets/images/Screenshot 2023-11-30 105004.png',
-                    street: '70 West 37th Street #709',
-                  ),
-                ],
+        SizedBox(
+          width: double.infinity,
+          height: 730,
+          child: ListView(
+            scrollDirection: Axis.vertical,
+            children: [
+              Cart(
+                onTab: (){},
+                space: 12.0,
+                beds: 2,
+                nameUser: 'Mohammad Ahmad',
+                isFavorite: true,
+                bathroom: 2,
+                onTabUserProfile: () {},
+                imageUser: 'assets/images/Screenshot 2023-11-30 155041.png',
+                imageUrl: 'assets/images/Screenshot 2023-11-30 105004.png',
+                street: '70 West 37th Street #709',
               ),
-            ),
-          ],
+              Cart(
+                onTab: (){},
+                space: 12.0,
+                beds: 2,
+                nameUser: 'Mohammad Ahmad',
+                isFavorite: true,
+                bathroom: 2,
+                onTabUserProfile: () {},
+                imageUser: 'assets/images/Screenshot 2023-11-30 155041.png',
+                imageUrl: 'assets/images/Screenshot 2023-11-30 105004.png',
+                street: '70 West 37th Street #709',
+              ),
+            ],
+          ),
         ),
 
       ],
+      ),
+    ),
+     ),
     );
   }
 }

@@ -87,6 +87,7 @@ class Details extends StatelessWidget {
                             '70 West 37th Street #709',
                             style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
                           ),
+
                           const SizedBox(height: 8),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
