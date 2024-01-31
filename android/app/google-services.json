@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "51318862772",
+    "project_id": "dwelling-d96ef",
+    "storage_bucket": "dwelling-d96ef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:51318862772:android:d0a2eed341498ce2cdb8e1",
+        "android_client_info": {
+          "package_name": "com.example.dwelling_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiZ_9WAFFrgiK91WR67eBL1l8TPTTgq80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
