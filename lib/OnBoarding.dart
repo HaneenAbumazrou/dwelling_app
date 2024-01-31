@@ -5,8 +5,11 @@ import 'Modal/Onboard.dart';
 
 class OnBoarding extends StatelessWidget {
   List<AssetImage> images = [
-    const AssetImage('assets/images/Capture.png'),
-    const AssetImage('assets/images/C.png'),
+     AssetImage('assets/images/Capture.png'),
+     AssetImage('assets/images/Screenshot (1).png'),
+
+
+
   ];
   int index = 0;
 
@@ -17,7 +20,7 @@ class OnBoarding extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
+          padding: const EdgeInsets.symmetric(horizontal: 24,vertical: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [

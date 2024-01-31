@@ -15,7 +15,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffBD5484),
+      backgroundColor: Colors.grey,
      body:SafeArea(
         child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 23),

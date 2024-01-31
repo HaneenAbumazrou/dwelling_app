@@ -1,4 +1,5 @@
 import 'package:dwelling_app/Modal/button.dart';
+import 'package:dwelling_app/map.dart';
 import 'package:flutter/material.dart';
 
 import 'MyProfile.dart';
@@ -88,7 +89,7 @@ class Details extends StatelessWidget {
                             style: TextStyle(fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
                           ),
 
-                          const SizedBox(height: 8),
+                           SizedBox(height: 8,width: 10,),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -107,7 +108,7 @@ class Details extends StatelessWidget {
                                   ),
                                 ],
                               ),
-                              const SizedBox(height: 8), // Add this SizedBox for spacing
+                              SizedBox(height: 12,width: 50,), // Add this SizedBox for spacing
                               Row(
                                 children: [
                                   const Icon(
@@ -123,7 +124,7 @@ class Details extends StatelessWidget {
                                   ),
                                 ],
                               ),
-                              const SizedBox(height: 8), // Add this SizedBox for spacing
+                              SizedBox(height: 12,width: 50,), // Add this SizedBox for spacing
                               Row(
                                 children: [
                                   const Icon(Icons.bed_sharp, color: Colors.white),
@@ -138,15 +139,19 @@ class Details extends StatelessWidget {
                               ),
                             ],
                           ),
-                          SizedBox(height: 8),
+                          SizedBox(height: 15),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text('Room description:',style: TextStyle(fontSize: 20,color: Colors.white,fontWeight: FontWeight.bold),),
                               Text(
-                                'Feel at home wherever you choose to live\n with Blueground. You’ll love this\n sophisticated Midtown furnished \none-bedroom apartment with its modern \ndecor, fully equipped kitchen, and cheery\n living room with great balcony views. ',
+                                'Feel at home wherever you choose to live\n with Blueground..... ',
                                 style: TextStyle(fontSize: 20,color: Colors.white),
                               ),
+                              TextButton(onPressed: (){}, child: Text("See more..",style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.grey[200]),)),
+                              SizedBox(height: 8,),
+                              Text('Roommate Number: 2',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white),)
+
                             ],
                           ),
                         ],
@@ -176,7 +181,14 @@ class Details extends StatelessWidget {
                       ],
                     ),
                     Spacer(),
-                    IconButton(onPressed:(){} , icon: Icon(Icons.location_on_outlined,size:50 ,color: Color(0xffBD5484),))
+                    IconButton(onPressed:(){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Map(),
+                        ),
+                      );                    } ,
+                        icon: Icon(Icons.location_on_outlined,size:50 ,color: Color(0xffBD5484),))
                   ],
                 ),
                 const SizedBox(height: 20.0),
