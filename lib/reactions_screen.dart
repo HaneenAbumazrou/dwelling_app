@@ -15,7 +15,7 @@ class _ReactionsScreenState extends State<ReactionsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: Color(0xffBD5484),
       body:SafeArea(
         child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 24),
